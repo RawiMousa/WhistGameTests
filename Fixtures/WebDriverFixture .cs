@@ -7,6 +7,7 @@ public class WebDriverFixture : IDisposable
     public IWebDriver ChromeDriver2 { get; private set; }
     public IWebDriver ChromeDriver3 { get; private set; }
     public IWebDriver ChromeDriver4 { get; private set; }
+    public bool       GameReady     { get; set; }
 
     public WebDriverFixture()
     {
@@ -50,9 +51,9 @@ public class WebDriverFixture : IDisposable
 
     public void Dispose()
     {
-        //ChromeDriver1?.Quit();
-        //ChromeDriver2?.Quit();
-        //ChromeDriver3?.Quit();
-        //ChromeDriver4?.Quit();
+        ChromeDriver1?.Quit();
+        ChromeDriver2?.Quit();
+        ChromeDriver3?.Quit();
+        ChromeDriver4?.Quit();
     }
 }
